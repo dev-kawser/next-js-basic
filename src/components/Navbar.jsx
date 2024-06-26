@@ -37,6 +37,14 @@ const Navbar = () => {
             title: 'Dashboard',
             path: "/dashboard"
         },
+        {
+            title: 'Posts',
+            path: "/posts"
+        },
+        {
+            title: 'Meals',
+            path: "/meals"
+        },
     ]
 
     const loginHandler = () => {
