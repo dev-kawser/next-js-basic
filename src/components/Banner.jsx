@@ -1,9 +1,10 @@
-
+import Image from "next/image";
+import itachi from "../../public/images/itachi.jpg"
 
 const Banner = () => {
     return (
-        <div className="bg-orange-500 min-h-96 my-20">
-            <h1>This is a banner</h1>
+        <div className="bg-orange-500">
+            <Image src={itachi} alt="itachi" height={1280} width={1920}></Image>
         </div>
     );
 };

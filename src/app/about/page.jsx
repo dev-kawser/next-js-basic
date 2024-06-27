@@ -1,7 +1,15 @@
 import AboutPage from "@/components/AboutPage";
 
+export const metadata = {
+    title: "about",
+    description: "meal page",
+};
 
-const AboutPages = () => {
+
+const AboutPages = async () => {
+
+
+
     return (
         <div className="h-screen">
             <AboutPage></AboutPage>

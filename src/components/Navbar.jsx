@@ -62,7 +62,7 @@ const Navbar = () => {
             <div className="text-3xl font-bold font-mono">
                 <Link href={'/'}>Next JS</Link>
             </div>
-            <ul className="flex justify-between space-x-4 text-xl font-mono">
+            <ul className="flex flex-wrap justify-between space-x-4 text-xl font-mono">
                 {
                     links.map((link) =>
                         <Link className={`${pathName === link.path && "text-black"}`} key={link.path} href={link.path}>{link.title}</Link>

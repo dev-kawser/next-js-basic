@@ -9,12 +9,12 @@ const nextConfig = {
         // ],
         remotePatterns: [
             {
-               protocol: "https",
-               hostname: "*",
-               port: "",
-               pathname: "/**",
+                protocol: "https",
+                hostname: "*",
+                port: "",
+                pathname: "/**",
             },
-         ],
+        ],
     },
     //     remotePatterns: [
     //         {
@@ -25,6 +25,22 @@ const nextConfig = {
     //         },
     //      ],
     // },
+    async redirects() {
+        return [
+            // Basic redirect
+            {
+                source: '/about',
+                destination: '/posts',
+                permanent: true,
+            },
+            // // Wildcard path matching
+            // {
+            //     source: '/blog/:slug',
+            //     destination: '/news/:slug',
+            //     permanent: true,
+            // },
+        ]
+    },
 };
 
 export default nextConfig;

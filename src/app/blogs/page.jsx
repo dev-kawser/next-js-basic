@@ -1,14 +1,17 @@
 import Link from "next/link";
+import { Headland_One } from "next/font/google";
+
+const font = Headland_One({ weight: ['400',], subsets: ["latin"] });
 
 
 const BlogsPage = () => {
     return (
         <div className="container mx-auto">
-            <h1 className="text-center my-5">This is a BlogsPage</h1>
+            <h1 className="text-center my-5">This is a Blogs Page</h1>
             {
                 blogs.map(blog => (
-                    <div className="border-2 p-8 my-3 space-y-2">
-                        <h1>{blog.title}</h1>
+                    <div key={blog.title} className='border-2 p-8 my-3 space-y-2'>
+                        <h1 className={`${font.className}`}>{blog.title}</h1>
                         <p>{blog.description}</p>
                         <button className="bg-cyan-400 py-2 px-3">
                             <Link href={`/blogs/${blog.slug}`}>View Details</Link>
