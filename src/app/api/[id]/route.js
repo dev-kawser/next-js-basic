@@ -1,5 +1,12 @@
+export async function GET() {
+    return Response.json(users, {
+        headers: {
+            "Set-Cookie" : "theme=dark"
+        }
+    })
+}
+
 export async function PATCH(request, { params }) {
-    
     const body = await request.json()
     const index = users.findIndex(us => us.id === parseInt(params.id))
 
